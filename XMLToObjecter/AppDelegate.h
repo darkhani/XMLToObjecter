@@ -12,6 +12,8 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate,NSTextFieldDelegate>{
     NSString *text;
     NSMutableArray *keyArr;
+    NSString *hFileString;
+    NSString *mFileString;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -24,6 +26,10 @@
 @property (weak) IBOutlet NSButton *kXmlToJsonButton;
 @property (weak) IBOutlet NSButton *kXmlToXcodeObjButton;
 @property (weak) IBOutlet NSButton *kURLGetButton;
+@property (weak) IBOutlet NSButton *kHfileToClipButton;
+@property (weak) IBOutlet NSButton *kMfileToClipButton;
+
+
 
 @property (weak) IBOutlet NSTextField *kCopyTF;
 @property (weak) IBOutlet NSTextField *kOrgTF;

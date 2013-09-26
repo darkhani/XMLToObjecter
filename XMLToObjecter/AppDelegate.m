@@ -65,6 +65,13 @@
     [self requestLogic];
 }
 
+- (IBAction)kHfileToClipButtonClick:(id)sender {
+    [self copyToClipboard:hFileString];
+}
+
+- (IBAction)kMfileToClipButtonClick:(id)sender {
+    [self copyToClipboard:mFileString];
+}
 
 #pragma mark - TextField delegate Method Management
 
@@ -276,8 +283,8 @@
     NSData *retJsonData;
     NSString *retString;
     
-    NSString *hFileString;
-    NSString *mFileString;
+//    NSString *hFileString;
+//    NSString *mFileString;
     
     if (![kOrgTF.stringValue isEqualToString:@""]){
         dic = (NSMutableDictionary*)[XMLReader dictionaryForXMLString:kOrgTF.stringValue error:&error];
